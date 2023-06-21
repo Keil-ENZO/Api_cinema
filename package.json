@@ -1,0 +1,16 @@
+{
+  "name": "api_cinema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/style.css -o ./dist/style.css",
+    "watch": "tailwindcss -i ./css/style.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
