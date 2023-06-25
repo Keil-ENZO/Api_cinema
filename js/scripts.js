@@ -30,4 +30,21 @@ function Menu(e) {
       menu.classList.remove("opacity-100"));
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    speed: 800,
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    autoplay: {
+      delay: 2000,
+    },
+  });
+});

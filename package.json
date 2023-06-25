@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "swiper": "^9.4.1"
   }
 }

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CineMare.</title>
+    <meta name="description" content="Venez decouvrir les meilleurs film du moment">
     <link rel="stylesheet" href="./dist/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,30 +19,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
-  <body>
+  <body class="bg-colors-cuaternario text-colors-terciario tracking-wider">
+
     <header>
       <nav
-        class="md:flex md:items-center md:justify-between p-5 bg-colors-secundario"
+        class="md:flex md:items-center md:justify-between p-5 bg-colors-secundario mb-12" 
       >
-      <div class="flex justify-between items-center">
-        <h1 class="text-5xl font-font-family-principal text-colors-terciario">
-          Cine<span class="text-colors-principal">Mare.</span>
-        </h1>
-        <span class="text-3xl cursor-pointer md:hidden block text-colors-terciario"> <i onclick="Menu(this)" class="fa-solid fa-bars"></i> </span>
-      </div>
+        <div class="flex justify-between items-center">
+          <h1 class="text-5xl font-font-family-principal ">
+            Cine<span class="text-colors-principal">Mare.</span>
+          </h1>
+          <span
+            class="text-3xl cursor-pointer md:hidden block "
+          >
+            <i onclick="Menu(this)" class="fa-solid fa-bars"></i>
+          </span>
+        </div>
 
         <div>
           <ul
-            class="md:flex md:static md:w-auto absolute md:space-x-5 bg-colors-secundario w-full left-0 md:py-0 py-7 md:space-y-0 space-y-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-300"
+            class="md:flex md:static md:w-auto absolute text-center md:space-x-5 bg-colors-secundario w-full left-0 md:py-0 py-7 md:space-y-0 space-y-5 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-300 z-50"
           >
             <li class="link"><a href="#">A l'affiche</a></li>
-            <li class="link"><a href="#">Les Meilleurs</a></li>
+            <li class="link"><a href="#">Les meilleurs</a></li>
             <li class="link"><a href="#">Prochainement</a></li>
             <li class="link"><a href="#">Contact</a></li>
           </ul>
         </div>
       </nav>
+
+      <div class="swiper w-full h-[300px] z-0 md:w-[600px] md:h-[300px]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <h2 class="text-3xl font-font-family-principal">A l'affiche</h2>
+            <img src="./img/now.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <h2 class="text-3xl font-font-family-principal">Les meilleurs</h2>
+            <img src="./img/movie.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <h2 class="text-3xl font-font-family-principal">Prochainement</h2>
+            <img src="./img/comingSoon.jpg" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
     </header>
 
     <!-- 
@@ -50,5 +81,6 @@
     <img src="" id="video" alt="" /> -->
 
     <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

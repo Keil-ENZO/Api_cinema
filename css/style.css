@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .link {
-    @apply text-colors-terciario text-lg hover:text-colors-principal font-font-family-secundario hover:underline ease-in-out duration-300;
+    @apply text-base hover:text-colors-principal font-font-family-secundario ease-in-out duration-300;
 }
