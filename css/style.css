@@ -5,3 +5,15 @@
 .link {
     @apply text-base hover:text-colors-principal font-font-family-secundario ease-in-out duration-300;
 }
+
+.poster{
+    @apply h-[300px] w-[200px] rounded-md mb-3;
+}
+
+.title {
+    @apply font-bold font-font-family-secundario text-colors-terciario text-base
+}
+
+.card {
+    @apply flex flex-col items-center justify-center w-[200px] bg-colors-secundario rounded-md cursor-pointer;
+}

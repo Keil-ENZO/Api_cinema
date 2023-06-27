@@ -1,23 +1,55 @@
 const apiKey = "ceaf9fbc0cba12fa894f98fa5d74de85";
+const page = 1;
 const url =
   "https://api.themoviedb.org/3/discover/movie?api_key=" +
   apiKey +
-  "&language=fr-FR&page=1&sort_by=popularity.desc";
+  `&language=fr-FR&page=${page}&sort_by=popularity.desc`;
 
-// fetch(url)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//     document.getElementById("title").innerHTML = data.results[0].title;
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
 
-//     //poster
-//     document.getElementById("poster").src =
-//       "https://image.tmdb.org/t/p/w500" + data.results[0].poster_path;
+    let count = 0;
 
-//     // //image
-//     // document.getElementById("video").src =
-//     //   "https://image.tmdb.org/t/p/w500" + data.backdrop_path;
-//   });
+    for (let i = 0; i < data.results.length; i++) {
+      if (count < 3) {
+        const info = data.results[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const poster = document.createElement("img");
+        poster.classList.add("poster");
+        poster.setAttribute("id", "poster");
+        poster.src = "https://image.tmdb.org/t/p/w500" + info.poster_path;
+
+        const title = document.createElement("h2");
+        title.classList.add("title");
+        title.setAttribute("id", "title");
+        title.innerHTML = info.title;
+
+        const date = document.createElement("p");
+        date.classList.add("title");
+        date.setAttribute("id", "date");
+        date.innerHTML = formatDate(info.release_date);
+
+        card.appendChild(poster);
+        card.appendChild(title);
+        card.appendChild(date);
+        best.appendChild(card);
+
+        count++;
+      }
+    }
+  });
+
+function formatDate(date) {
+  const newDate = new Date(date);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return newDate.toLocaleDateString("fr-FR", options);
+}
+
 
 function Menu(e) {
   let menu = document.querySelector("ul");

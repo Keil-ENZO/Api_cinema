@@ -550,6 +550,18 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -594,13 +606,18 @@ video {
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
-.bg-colors-terciario {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-7 {
@@ -616,18 +633,9 @@ video {
   font-family: Oswald;
 }
 
-.font-font-family-secundario {
-  font-family: Roboto;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -635,8 +643,9 @@ video {
   line-height: 1;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .tracking-wider {
@@ -686,6 +695,34 @@ video {
 .link:hover {
   --tw-text-opacity: 1;
   color: rgb(179 0 0 / var(--tw-text-opacity));
+}
+
+.poster {
+  margin-bottom: 0.75rem;
+  height: 300px;
+  width: 200px;
+  border-radius: 0.375rem;
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(204 204 204 / var(--tw-text-opacity));
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
