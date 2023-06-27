@@ -11,9 +11,25 @@ fetch(url)
     console.log(data);
 
     let count = 0;
+    let cardDisplay = 0;
 
     for (let i = 0; i < data.results.length; i++) {
-      if (count < 3) {
+      const screenWidth = window.innerWidth;
+      console.log(screenWidth);
+
+      if (screenWidth < 460) {
+        cardDisplay = 1;
+      } else if (screenWidth < 700) {
+        cardDisplay = 2;
+      } else if (screenWidth < 950) {
+        cardDisplay = 3;
+      } else if (screenWidth < 1200) {
+        cardDisplay = 4;
+      } else {
+        cardDisplay = 5;
+      }
+
+      if (count < cardDisplay) {
         const info = data.results[i];
 
         const card = document.createElement("div");
@@ -27,7 +43,11 @@ fetch(url)
         const title = document.createElement("h2");
         title.classList.add("title");
         title.setAttribute("id", "title");
-        title.innerHTML = info.title;
+        if (info.title.length > 20) {
+          title.innerHTML = info.title.substring(0, 20) + "...";
+        } else {
+          title.innerHTML = info.title;
+        }
 
         const date = document.createElement("p");
         date.classList.add("title");
@@ -49,7 +69,6 @@ function formatDate(date) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return newDate.toLocaleDateString("fr-FR", options);
 }
-
 
 function Menu(e) {
   let menu = document.querySelector("ul");
