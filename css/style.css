@@ -15,7 +15,7 @@
 }
 
 .card {
-    @apply relative flex flex-col items-center justify-center w-[200px] bg-colors-secundario rounded-md cursor-pointer;
+    @apply relative flex flex-col items-center justify-center pb-4 w-[200px] bg-colors-secundario rounded-md cursor-pointer;
 }
 
 .note {

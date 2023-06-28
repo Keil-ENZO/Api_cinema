@@ -12,6 +12,7 @@ fetch(url)
 
     let count = 0;
     let cardDisplay = 0;
+    let moviesId = data.results.map((movie) => movie.id);
 
     for (let i = 0; i < data.results.length; i++) {
       const screenWidth = window.innerWidth;
@@ -74,6 +75,41 @@ fetch(url)
         best.appendChild(card);
 
         count++;
+
+        card.addEventListener("mouseover", () => {
+          let movieId = moviesId[i];
+          console.log(movieId);
+          fetch(
+            `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`
+          ).then((response) => {
+            response.json().then((data) => {
+              console.log(data);
+
+              const video = data.results[0].key;
+
+              const iframe = document.createElement("iframe");
+              iframe.setAttribute(
+                "src",
+                `https://www.youtube.com/embed/${video}`
+              );
+              poster.replaceWith(iframe);
+              iframe.setAttribute("width", "100%");
+              iframe.setAttribute("height", "100%");
+              iframe.setAttribute("frameborder", "0");
+              iframe.setAttribute("allowfullscreen", "true");
+
+              card.appendChild(iframe);
+            });
+          });
+
+          console.log("mouse hover");
+        });
+
+        card.addEventListener("mouseout", () => {
+          card.classList.remove("transform", "scale-105");
+
+          console.log("mopuse out");
+        });
       }
     }
   });
