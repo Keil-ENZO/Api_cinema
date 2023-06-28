@@ -40,6 +40,19 @@ fetch(url)
         poster.setAttribute("id", "poster");
         poster.src = "https://image.tmdb.org/t/p/w500" + info.poster_path;
 
+        const note = document.createElement("p");
+        note.classList.add("note");
+        note.setAttribute("id", "note");
+        note.innerHTML = info.vote_average * 10 + "%";
+
+        if (info.vote_average * 10 <= 70 && info.vote_average * 10 >= 40) {
+          note.classList.add("bg-yellow-500");
+        } else if (info.vote_average * 10 < 40) {
+          note.classList.add("bg-red-500");
+        } else {
+          note.classList.add("bg-green-500");
+        }
+
         const title = document.createElement("h2");
         title.classList.add("title");
         title.setAttribute("id", "title");
@@ -55,6 +68,7 @@ fetch(url)
         date.innerHTML = formatDate(info.release_date);
 
         card.appendChild(poster);
+        card.append(note);
         card.appendChild(title);
         card.appendChild(date);
         best.appendChild(card);

@@ -7,13 +7,18 @@
 }
 
 .poster{
-    @apply h-[300px] w-[200px] rounded-md mb-3;
+    @apply h-[300px] w-[200px] rounded-md mb-5;
 }
 
 .title {
-    @apply font-bold font-font-family-secundario text-colors-terciario text-base
+    @apply font-bold font-font-family-secundario text-base
 }
 
 .card {
-    @apply flex flex-col items-center justify-center w-[200px] bg-colors-secundario rounded-md cursor-pointer;
+    @apply relative flex flex-col items-center justify-center w-[200px] bg-colors-secundario rounded-md cursor-pointer;
 }
+
+.note {
+    @apply absolute top-2 left-2 flex items-center justify-center h-12 w-12 text-colors-cuaternario rounded-full first-letter:font-font-family-secundario text-sm;
+}
+
