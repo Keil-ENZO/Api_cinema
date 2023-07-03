@@ -8,6 +8,14 @@ const url =
   apiKey +
   `&language=fr-FR&append_to_response=videos`;
 
+
+
+function formatDate(date) {
+  const newDate = new Date(date);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return newDate.toLocaleDateString("fr-FR", options);
+}
+
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
@@ -44,9 +52,3 @@ fetch(url)
 
     annonce.src = "https://www.youtube.com/embed/" + data.videos.results[1].key;
   });
-
-function formatDate(date) {
-  const newDate = new Date(date);
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  return newDate.toLocaleDateString("fr-FR", options);
-}

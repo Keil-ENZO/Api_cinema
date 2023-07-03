@@ -89,8 +89,13 @@ fetch(url)
         });
 
         card.addEventListener("click", () => {
-          document.location.href =
-            "../pages/movie.html?id=" + card.getAttribute("id");
+          loader.classList.add("loader");
+
+          setTimeout(() => {
+            loader.classList.remove("loader");
+            document.location.href =
+              "../pages/movie.html?id=" + card.getAttribute("id");
+          }, 800);
         });
       }
     }
