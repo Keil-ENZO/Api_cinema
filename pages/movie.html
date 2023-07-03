@@ -25,7 +25,7 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
-  <body class="bg-colors-cuaternario text-colors-terciario tracking-wider">
+  <body class="bg-colors-cuaternario text-colors-terciario tracking-wider overflow-x-hidden">
     <header>
       <nav
         class="md:flex md:items-center md:justify-between p-5 bg-colors-secundario mb-12"
@@ -56,7 +56,7 @@
     <main>
       <section
         id="view"
-        class="flex justify-between items-center flex-col md:flex-row p-10 "
+        class="flex justify-around items-center flex-col md:flex-row p-10 "
       >
         <div class="relative">
           <img
@@ -70,8 +70,9 @@
         </div>
 
         <div class="max-w-[500px] w-full py-10 my-10 ">
-          <div class="flex items-center">
-            <h2 class="title mr-10 mb-10 text-3xl uppercase" id="title">title</h2>
+          <div class="mb-10">
+            <h2 class="title text-3xl uppercase" id="title">title</h2>
+            <p id="date"></p>
           </div>
           <p id="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -79,6 +80,9 @@
             natus. Tempora quod molestias quos, minus non voluptates. Officiis,
             dolor illum.
           </p>
+
+          <p id="genres" class="mt-10"></p>
+          <div id="companies" class="flex mt-5 bg-colors-secundario p-2 rounded-lg opacity-70 gap-2"></div>
         </div>
       </section>
 

@@ -16,6 +16,7 @@ fetch(url)
     poster.src = "https://image.tmdb.org/t/p/w500" + data.poster_path;
 
     title.innerHTML = data.title;
+    date.innerHTML = formatDate(data.release_date);
 
     note.innerHTML = Math.round(data.vote_average * 10) + "%";
     if (data.vote_average * 10 <= 70 && data.vote_average * 10 >= 40) {
@@ -27,6 +28,25 @@ fetch(url)
     }
 
     description.innerHTML = data.overview;
+    genres.innerHTML =
+      "Genres : " + " " + data.genres.map((genre) => genre.name).join(", ");
 
-    annonce.src = "https://www.youtube.com/embed/" + data.videos.results[0].key;
+    for (let i = 0; i < data.production_companies.length; i++) {
+      const company = document.createElement("img");
+      company.classList.add("h-12", "mr-4");
+
+      company.src =
+        "https://image.tmdb.org/t/p/w500" +
+        data.production_companies[i].logo_path;
+
+      companies.appendChild(company);
+    }
+
+    annonce.src = "https://www.youtube.com/embed/" + data.videos.results[1].key;
   });
+
+function formatDate(date) {
+  const newDate = new Date(date);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return newDate.toLocaleDateString("fr-FR", options);
+}
