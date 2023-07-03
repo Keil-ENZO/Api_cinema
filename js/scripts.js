@@ -83,9 +83,14 @@ fetch(url)
           trailer(cardId);
         });
 
-        poster.addEventListener("mouseout", () => {
+        card.addEventListener("mouseout", () => {
           const iframe = card.querySelector("iframe");
           iframe.replaceWith(poster);
+        });
+
+        card.addEventListener("click", () => {
+          document.location.href =
+            "../pages/movie.html?id=" + card.getAttribute("id");
         });
       }
     }
@@ -106,6 +111,8 @@ function trailer(id) {
       iframe.setAttribute("src", `https://www.youtube.com/embed/${video}`);
       iframe.setAttribute("width", "100%");
       iframe.setAttribute("height", "100%");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "1");
 
       // Supprimer l'élément poster et le remplacer par l'iframe
       if (poster && poster.parentNode) {
@@ -148,4 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 2000,
     },
   });
+
+  swiper.autoplay.start();
 });

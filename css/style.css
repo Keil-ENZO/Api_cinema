@@ -7,15 +7,15 @@
 }
 
 .poster{
-    @apply h-[300px] w-[200px] rounded-md mb-5;
+    @apply h-[300px] w-[200px] rounded-md mb-5 cursor-pointer;
 }
 
 .title {
-    @apply font-bold font-font-family-secundario text-base
+    @apply font-bold font-font-family-secundario ;
 }
 
 .card {
-    @apply relative flex flex-col items-center justify-center pb-4 w-[200px] bg-colors-secundario rounded-md cursor-pointer;
+    @apply relative flex flex-col items-center justify-center pb-4 h-[385px] w-[200px] bg-colors-secundario rounded-md cursor-pointer;
 }
 
 .note {
