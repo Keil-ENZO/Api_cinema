@@ -23,8 +23,8 @@
 }
 
 .loader {
-    @apply absolute bg-colors-secundario h-screen w-screen ease-in-out z-50;
-    animation: loader 1.68s linear infinite;
+    @apply absolute bg-colors-secundario h-[200%] w-screen ease-in-out z-50;
+    animation: loader 1s linear infinite;
 
 }
 

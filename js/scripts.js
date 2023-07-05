@@ -95,7 +95,7 @@ fetch(url)
             loader.classList.remove("loader");
             document.location.href =
               "../pages/movie.html?id=" + card.getAttribute("id");
-          }, 800);
+          }, 500);
         });
       }
     }
