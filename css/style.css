@@ -37,3 +37,16 @@
     }
 }
 
+.loaderInverse {
+    @apply absolute bg-colors-secundario h-[200%] w-screen ease-in-out z-50;
+    animation: loaderInverse 1s linear infinite;
+}
+
+@keyframes loaderInverse {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

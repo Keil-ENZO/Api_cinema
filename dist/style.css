@@ -790,10 +790,6 @@ video {
   opacity: 0.7;
 }
 
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -890,6 +886,27 @@ video {
   }
 }
 
+.loaderInverse {
+  position: absolute;
+  z-index: 50;
+  height: 200%;
+  width: 100vw;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: loaderInverse 1s linear infinite;
+}
+
+@keyframes loaderInverse {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -952,4 +969,3 @@ video {
     opacity: 1;
   }
 }
-
