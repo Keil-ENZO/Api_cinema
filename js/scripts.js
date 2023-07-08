@@ -1,10 +1,12 @@
 const apiKey = "ceaf9fbc0cba12fa894f98fa5d74de85";
 const page = 1;
+const cardHoverState = {};
+
 const url =
   "https://api.themoviedb.org/3/discover/movie?api_key=" +
   apiKey +
   `&language=fr-FR&page=${page}&sort_by=popularity.desc`;
-const cardHoverState = {};
+
 const vote =
   "https://api.themoviedb.org/3/discover/movie?api_key=" +
   apiKey +
