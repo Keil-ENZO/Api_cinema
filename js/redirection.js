@@ -21,3 +21,23 @@ function Menu(e) {
       menu.classList.remove("top-[80px]"),
       menu.classList.remove("opacity-100"));
 }
+
+
+linkBest.addEventListener("click", () => {
+  document.location.href =
+    "../pages/categories.html" + `?category=Les%20meilleurs%films?page=${page}`;
+  console.log("Les meilleurs films");
+});
+
+linkBestNote.addEventListener("click", () => {
+  document.location.href =
+    "../pages/categories.html" + `?category=Les%20meilleurs%notes?page=${page}`;
+  console.log("Les meilleurs notes");
+});
+
+linkUpcoming.addEventListener("click", () => {
+  document.location.href =
+    "../pages/categories.html" +
+    `?category=Les%20prochaines%sorties?page=${page}`;
+  console.log("Les prochaines sorties");
+});
