@@ -353,3 +353,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   swiper.autoplay.start();
 });
+
+const navBar = document.querySelector("nav");
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY == 0) {
+    navBar.classList.remove(
+      "top-0",
+      "fixed",
+      "w-full",
+      "z-50",
+      "bg-colors-secundario",
+      "bg-opacity-90"
+    );
+
+    navBar.classList.add("bg-colors-secundario");
+  } else if (window.scrollY < lastScrollTop) {
+    navBar.classList.add(
+      "top-0",
+      "fixed",
+      "w-full",
+      "z-50",
+      "bg-colors-secundario",
+      "bg-opacity-90"
+    );
+  } else {
+    navBar.classList.remove(
+      "top-0",
+      "fixed",
+      "w-full",
+      "z-50",
+      "bg-colors-secundario",
+      "bg-opacity-90"
+    );
+  }
+
+  lastScrollTop = window.scrollY;
+
+  console.log(window.scrollY);
+});
+
