@@ -35,7 +35,10 @@
         class="md:flex md:items-center md:justify-between p-5 bg-colors-secundario mb-12"
       >
         <div class="flex justify-between items-center">
-          <h1 id="cinemare" class="text-5xl font-font-family-principal cursor-pointer">
+          <h1
+            id="cinemare"
+            class="text-5xl font-font-family-principal cursor-pointer"
+          >
             Cine<span class="text-colors-principal">Mare.</span>
           </h1>
           <span class="text-3xl cursor-pointer md:hidden block">
@@ -55,13 +58,13 @@
         </div>
       </nav>
 
-      <div class="swiper w-full  z-0 md:w-[800px] md:h-[300px]">
+      <div class="swiper w-full z-0 md:w-[800px] md:h-[300px]">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
             <h2 class="text-3xl font-font-family-principal">Les meilleurs</h2>
-            <img  src="./img/1.png" alt="" />
+            <img src="./img/1.png" alt="" />
           </div>
           <div class="swiper-slide">
             <h2 class="text-3xl font-font-family-principal">Du moment</h2>
@@ -83,22 +86,59 @@
 
     <main>
       <section class="py-20 px-10 flex flex-col justify-between items-center">
-        <h2 class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"><a href="#">Les meilleurs</a></h2>
-        <div id="best" class=" flex justify-between gap-10"></div>
+        <h2
+          class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"
+        >
+          <a href="#">Les meilleurs</a>
+        </h2>
+        <div id="best" class="flex justify-between gap-10"></div>
       </section>
 
-
       <section class="py-20 px-10 flex flex-col justify-between items-center">
-        <h2 class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"><a href="#">Les mieux notes</a></h2>
-        <div id="bestNote" class=" flex justify-between gap-10"></div>
+        <h2
+          class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"
+        >
+          <a href="#">Les mieux notes</a>
+        </h2>
+        <div id="bestNote" class="flex justify-between gap-10"></div>
       </section>
 
-
       <section class="py-20 px-10 flex flex-col justify-between items-center">
-        <h2 class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"><a href="#">Prochainement</a></h2>
-        <div id="upcoming" class=" flex justify-between gap-10"></div>
+        <h2
+          class="text-4xl font-font-family-principal text-colors-principal mb-10 hover:underline"
+        >
+          <a href="#">Prochainement</a>
+        </h2>
+        <div id="upcoming" class="flex justify-between gap-10"></div>
       </section>
     </main>
+
+    <footer>
+      <section class="bg-colors-secundario h-full w-full">
+        <div
+          class="flex items-center justify-between flex-col p-5 gap-5 md:flex-row"
+        >
+          <div>
+            <h1
+           
+              class="text-5xl font-font-family-principal cursor-pointer"
+            >
+              Cine<span class="text-colors-principal">Mare.</span>
+            </h1>
+            <p class="mt-5 opacity-85">© CineMare par KEIL Enzo, 2023</p>
+          </div>
+
+          <div>
+            <ul class="">
+              <li class="link"><a href="#">Les meilleurs</a></li>
+              <li class="link"><a href="#">Les mieux notés</a></li>
+              <li class="link"><a href="#">Prochainement</a></li>
+              <li class="link"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
 
     <script src="./js/scripts.js"></script>
     <script src="../js/redirection.js"></script>
